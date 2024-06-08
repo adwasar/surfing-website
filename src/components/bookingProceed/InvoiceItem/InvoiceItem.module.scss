@@ -1,0 +1,31 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+@import '../mixins';
+
+.line {
+  &__caption {
+    @include captionType;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__wr {
+    @include flex_block(row, nowrap, space-between, center, center);
+  }
+
+  &__link {
+    @include captionType;
+    @include hover;
+
+    text-decoration: underline;
+  }
+
+  &__info {
+    & strong {
+      font-weight: 400;
+      color: $color-text-gray6;
+    }
+  }
+}

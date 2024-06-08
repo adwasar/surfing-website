@@ -1,0 +1,18 @@
+@import 'src/assets/scss/variables';
+
+.productPage__productReviews {
+  grid-area: rewievs;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &.bordered {
+    padding: 5px 15px 15px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: rgba(220, 220, 220, 1);
+  }
+}

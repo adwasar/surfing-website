@@ -1,0 +1,19 @@
+@import 'src/assets/scss/mixins';
+
+.content {
+  position: relative;
+}
+
+.img {
+  margin-left: auto;
+  display: block;
+  width: 90%;
+  height: 634px;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 12px;
+  @include tablet {
+    height: 520px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.boundary {
+  padding: 2rem;
+
+  &__in {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  &__caption {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__open {
+    text-align: center;
+  }
+
+  &__info {
+    padding: 1rem;
+    margin: 0 auto;
+
+    text-align: left;
+    white-space: pre-wrap;
+
+    background-color: #c0c0c0;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__linkWrap {
+    padding: 1rem;
+
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: underline;
+
+    @include hover;
+  }
+}

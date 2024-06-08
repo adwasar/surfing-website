@@ -1,0 +1,18 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+@import '../mixins';
+
+.product {
+  &__item {
+    @include flex_block(row, nowrap, space-between, center, center);
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    @include captionType;
+    @include hover;
+  }
+}

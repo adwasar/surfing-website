@@ -1,0 +1,88 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.btn {
+  @include flex_block(row, nowrap, center, center);
+
+  font-size: 100%;
+
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &--contacts {
+    width: 160px;
+    height: 50px;
+    padding: 5px 26px;
+    font-size: 16px;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 15px;
+    @include hover($bg_color: $color-light-blue);
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+  &--fontFamOpSans {
+    font-family: 'Open Sans';
+  }
+  &--link {
+    font-size: 14px;
+    color: #717171;
+    @include hover($color: $color-hover);
+  }
+  &--modColorPrime {
+    @include hover($bg_color: $color-light-blue);
+
+    color: $color-white;
+
+    background-color: $color-blue;
+    border: 1px solid $color-gray3;
+  }
+
+  &--modSize1 {
+    width: 100%;
+
+    padding: 16px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+
+    border-radius: 8px;
+  }
+  &--modAuthBtn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    height: 60px;
+    max-width: 400px;
+    @mixin tablet {
+      max-width: 350px;
+    }
+    @media (max-width: 768px) and (orientation: landscape) {
+      height: 35px;
+    }
+  }
+
+  &--modSize2 {
+    width: 39px;
+    height: 39px;
+
+    padding: 9px 9px;
+
+    border-radius: 50%;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}

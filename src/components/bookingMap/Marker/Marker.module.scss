@@ -1,0 +1,54 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.marker {
+  --color-marker: rgba(51, 56, 99, 0.5);
+  @include transition_color_transform_background;
+
+  position: relative;
+
+  min-width: 40px;
+
+  padding: 5px 5px 4px;
+  margin-bottom: 8px;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: $color-white;
+  text-align: center;
+  font-variant-caps: small-caps;
+
+  background-color: var(--color-marker);
+  border-radius: 4px;
+
+  &:before {
+    @include transition_border_color;
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--color-marker);
+    transform: translateX(-50%) translateY(8px);
+  }
+
+  &:hover {
+    --color-marker: rgba(51, 56, 99, 1);
+    transform: scale(1.1);
+    &::before {
+      transform: translateX(-50%) translateY(7.5px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

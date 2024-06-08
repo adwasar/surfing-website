@@ -1,0 +1,20 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.wrapper {
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+  }
+}
+
+.main {
+  flex-grow: 1;
+  background-color: $color-white;
+
+  @include tablet {
+    height: 90vh;
+  }
+}

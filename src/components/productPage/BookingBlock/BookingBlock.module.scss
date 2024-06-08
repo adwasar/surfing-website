@@ -1,0 +1,19 @@
+@import 'src/assets/scss/variables';
+
+.productPage__productBooking {
+  grid-area: 2 / 2 / 3 / 4;
+
+  &.bordered {
+    padding: 5px 15px 15px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .productPage__gridBooking {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 52px 52px;
+    gap: 15px;
+  }
+}

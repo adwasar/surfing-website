@@ -1,0 +1,42 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.skeleton {
+  color: $color-text-gray;
+
+  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  animation: pulse 1.5s ease-in-out infinite;
+
+  &--img {
+    @include flex_block(row, nowrap, center, center, center);
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 5px;
+  }
+
+  animation: changeColor 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: $color-text-gray;
+  }
+  70% {
+    color: $color-white;
+  }
+  100% {
+    color: $color-text-gray;
+  }
+}

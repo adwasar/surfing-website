@@ -1,0 +1,13 @@
+@import 'src/assets/scss/variables';
+
+.productPage {
+  &__gridLayout {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1.5fr) minmax(150px, 0.5fr);
+    grid-template-rows: minmax(500px, auto) 1fr;
+    gap: 20px 25px;
+    grid-template-areas:
+      'img descrip list'
+      'rewievs booking booking';
+  }
+}

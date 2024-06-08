@@ -1,0 +1,42 @@
+.customerFeedback {
+  display: flex;
+  flex-direction: column;
+  &__body {
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 768px) {
+      padding-bottom: 15px;
+    }
+    @media (max-width: 480px) {
+      padding-bottom: 5px;
+    }
+  }
+  &__title {
+    margin-bottom: 18px;
+    max-width: 550px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 104.166667%; /* 50/48 */
+    color: #09132c;
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media (max-width: 480px) {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    max-width: 530px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 150%; /* 27/18 */
+    color: #717171;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

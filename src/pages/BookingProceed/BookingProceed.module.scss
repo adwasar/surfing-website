@@ -1,0 +1,55 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.proceed {
+  @include flex_block(row, nowrap, center, center, center);
+  height: 100%;
+
+  &__container {
+    flex: 0 1 468px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $color-black2;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__in {
+    padding: 15px;
+
+    border: 1px solid $color-gray3;
+    border-radius: 12px;
+  }
+
+  &__step {
+    min-height: 200px;
+
+    margin-bottom: 11px;
+  }
+
+  &__control {
+    @include flex_block(column, nowrap, flex-start, center);
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__link {
+    @include hover;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    color: $color-text-gray6;
+  }
+}

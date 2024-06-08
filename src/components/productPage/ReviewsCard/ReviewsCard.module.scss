@@ -1,0 +1,56 @@
+@import 'src/assets/scss/variables';
+
+.reviewsCard {
+  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: $color-black2;
+  font-size: 12px;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    .colspan {
+      flex: 2;
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+
+  &__reviewCount,
+  &__creation {
+    font-size: 10px;
+    font-weight: 300;
+    color: $color-text-gray6;
+  }
+
+  &__rating {
+    img {
+      margin-left: 0.5px;
+      width: 11px;
+      height: 11px;
+      transition: all ease-in 100ms;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+  &__rating,
+  &__creation {
+    text-align: right;
+  }
+}

@@ -1,0 +1,46 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins.scss';
+
+input {
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 20px;
+  background-color: transparent;
+  border: none;
+  &::placeholder {
+    font-size: 16px;
+    color: $color-text-gray6;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+input[type='password'] {
+  color: $color-text-gray6;
+  font-size: 26px;
+  line-height: 2;
+  font-family: 'Inter', serif;
+}
+
+.fieldContainer {
+  display: flex;
+  justify-content: center;
+  background-color: $color-gray3;
+  border-radius: 10px;
+  height: 60px;
+  overflow: hidden;
+  &__btn {
+    width: 100%;
+    max-width: 60px;
+    outline: transparent;
+    & :focus-visible {
+      outline: transparent;
+    }
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    height: 35px;
+  }
+}

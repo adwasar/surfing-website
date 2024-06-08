@@ -1,0 +1,99 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.title {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.imagesContainer {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 36px;
+  @include desktop {
+    grid-gap: 18px;
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 204px);
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 204px);
+    grid-column-gap: 0;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  @include tablet {
+    border-radius: 6px;
+  }
+  .cardTitle {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    font-size: 20px;
+    font-weight: 400;
+    color: $color-white;
+  }
+  .cardImage {
+    height: 100%;
+    object-fit: cover;
+  }
+  .shadow {
+    height: 137px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(#00000000, #00000081);
+  }
+}
+
+.card:nth-child(1) {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.card:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.card:nth-child(3) {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.card:nth-child(4) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.card:nth-child(5) {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+@include tablet {
+  .card:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .card:nth-child(2) {
+    grid-area: auto;
+  }
+  .card:nth-child(3) {
+    grid-area: auto;
+  }
+  .card:nth-child(4) {
+    grid-area: auto;
+  }
+  .card:nth-child(5) {
+    grid-area: auto;
+  }
+}
+
+@include phone {
+  .card:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}

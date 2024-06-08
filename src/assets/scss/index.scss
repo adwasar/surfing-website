@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:regular&display=swap');
+
+@import '_variables';
+@import '_mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-black2;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  // height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+.container {
+  padding: 0 32px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  @media screen and (max-width: 1024px) {
+    padding: 0 24px;
+  }
+}
+
+.wrapperExt {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mainExt {
+  flex-grow: 1;
+
+  background-color: $color-white;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: $color-gray2;
+}
+
+*::-webkit-scrollbar-thumb {
+  @include transition_background;
+
+  background-color: $color-light-blue;
+  border-radius: 20px;
+  border: 1px solid $color-gray2;
+
+  &:hover {
+    background-color: $color-blue;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'src/assets/scss/variables';
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-gray3;
+  width: 100%;
+  max-width: 117px;
+  height: 60px;
+  border-radius: 10px;
+  &:focus-visible {
+    outline: transparent;
+  }
+  @media (max-width: 768px) and (orientation: landscape) {
+    height: 40px;
+  }
+}

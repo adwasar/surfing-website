@@ -1,0 +1,12 @@
+@import 'src/assets/scss/mixins.scss';
+
+.header {
+  @include container;
+  width: 100%;
+}
+
+.myContainer {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+}

@@ -1,0 +1,55 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.bookYouTravel {
+  width: 100%;
+  margin-bottom: 100px;
+
+  &__filter {
+    @include flex_block(row, nowrap, center, center, center);
+
+    &:not(:last-child) {
+      margin-bottom: 55px;
+    }
+  }
+  .catalog {
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    column-gap: 75px;
+    row-gap: 45px;
+    @media screen and (max-width: 1350px) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 45px;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 556px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.trigger {
+  height: 5px;
+}
+.pagination {
+  margin: 20px 0;
+  ul {
+    justify-content: flex-end;
+  }
+  button {
+    color: $color-black;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  column-gap: 75px;
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+}

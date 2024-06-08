@@ -1,0 +1,11 @@
+.productPage__navigation {
+  margin: 40px 0;
+  max-width: min-content;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all ease-in 100ms;
+  &:hover {
+    background-color: #cccccc78;
+  }
+}

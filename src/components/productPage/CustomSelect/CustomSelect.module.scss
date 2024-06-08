@@ -1,0 +1,15 @@
+@import 'src/assets/scss/variables';
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+  padding: 7px 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  &__label {
+    font-size: 10px;
+    color: $color-text-gray6;
+  }
+}

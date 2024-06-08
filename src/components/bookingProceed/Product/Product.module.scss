@@ -1,0 +1,33 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+@import '../mixins';
+
+.product {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &--cost {
+      @include flex_block(row, nowrap, space-between, center, center);
+    }
+  }
+  &__row {
+    @include flex_block(row, nowrap, flex-start, stretch);
+  }
+
+  &__col {
+    flex: 0 0 30%;
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+
+  &__caption {
+    @include captionType;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import 'src/assets/scss/variables';
+
+.datePicker {
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid rgba(241, 241, 241, 1);
+  border-radius: 10px;
+  &__wrapper {
+    flex: 1;
+  }
+
+  &__label {
+    font-size: 10px;
+    color: $color-text-gray6;
+  }
+
+  .divider {
+    margin: 0 10px;
+    width: 1px;
+    height: 40px;
+    background-color: rgba(220, 220, 220, 1);
+  }
+}

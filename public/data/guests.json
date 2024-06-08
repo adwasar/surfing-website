@@ -1,0 +1,7 @@
+[
+  { "name": "Without guests", "id": 1 },
+  { "name": "One guest", "id": 2 },
+  { "name": "Two guests", "id": 3 },
+  { "name": "Three guests", "id": 4 },
+  { "name": "Four guests", "id": 5 }
+]

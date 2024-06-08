@@ -1,0 +1,96 @@
+@import 'src/assets/scss/variables.scss';
+@import 'src/assets/scss/mixins.scss';
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sectionSubtitle {
+  margin-top: 18px;
+  font-size: 18px;
+  color: $color-text-gray6;
+  text-align: center;
+}
+
+.sectionWrapper {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  @include tablet {
+    flex-direction: column;
+  }
+
+  .sectionImage {
+    display: flex;
+    flex: 0 0 525px;
+    height: 483px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include desktop {
+      flex: 0 0 344px;
+      height: 326px;
+    }
+    @include tablet {
+      flex: 0 0 auto;
+      max-width: 344px;
+      height: 326px;
+    }
+    @include phone {
+      height: 290px;
+    }
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop {
+      gap: 20px;
+    }
+    .item {
+      display: flex;
+      gap: 25px;
+      max-width: 500px;
+      @include desktop {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.iconContainer {
+  flex: 0 0 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemTitle {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+  @include desktop {
+    line-height: normal;
+  }
+}
+
+.itemDescription {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 175%;
+  color: $color-text-gray6;
+  @include desktop {
+    line-height: normal;
+  }
+}

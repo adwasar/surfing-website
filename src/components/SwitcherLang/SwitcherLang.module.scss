@@ -1,0 +1,13 @@
+@import 'src/assets/scss/variables.scss';
+
+.switcher {
+  color: $color-text-gray6;
+}
+
+.lang {
+  cursor: pointer;
+}
+
+.active {
+  color: $color-blue;
+}

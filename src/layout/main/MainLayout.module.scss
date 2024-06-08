@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 124px;
+  padding-bottom: 30px;
+  @media (max-width: 1024px) {
+    gap: 70px;
+  }
+  @media (max-width: 768px) {
+    gap: 60px;
+  }
+  @media (max-width: 480px) {
+    gap: 50px;
+  }
+}
+
+.rightSide {
+  gap: 32px;
+  display: flex;
+  align-items: center;
+}

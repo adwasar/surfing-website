@@ -1,0 +1,73 @@
+.sliderFeedback {
+  &__slide {
+    padding: 30px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    @media (max-width: 375px) {
+      padding: 10px;
+    }
+    .card {
+      font-family: 'Rubik';
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      &__header {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__userInfo {
+        display: flex;
+        gap: 12px;
+      }
+
+      &__userFoto {
+        width: 40px;
+        height: 40px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__userBox {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+      }
+
+      &__userName {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 166.666667%; /* 30/18 */
+        color: #09132c;
+      }
+
+      &__address {
+        font-size: 14px;
+        color: #4d5666;
+      }
+
+      &__rating {
+        font-size: 16px;
+        color: #09132c;
+      }
+
+      &__feedbackText {
+        font-size: 16px;
+        color: #09132c;
+        line-height: 187.5%; /* 30/16 */
+      }
+    }
+  }
+}

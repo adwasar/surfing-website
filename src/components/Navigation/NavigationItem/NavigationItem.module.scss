@@ -1,0 +1,24 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.navigationItem {
+  color: $color-text-gray6;
+
+  @include transition_color;
+  &.active {
+    color: $color-black2;
+    font-weight: 600;
+  }
+  &--footer {
+    color: $color-black;
+    &.active {
+      color: $color-black;
+      font-weight: 400;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}

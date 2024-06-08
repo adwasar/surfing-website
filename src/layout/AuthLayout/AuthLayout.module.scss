@@ -1,0 +1,145 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins.scss';
+
+.myContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+  flex: 1;
+  min-height: fit-content;
+
+  @include tablet {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 75px;
+  }
+
+  @include phone {
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    padding-bottom: 10px;
+  }
+}
+.main {
+  @include container;
+  display: flex;
+  overflow: visible;
+  height: 100%;
+}
+.layout {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  max-width: 749px;
+  height: 632px;
+  background-image: url('/images/auth/man.webp');
+  background-repeat: no-repeat;
+  background-position: 70% 80%;
+  background-size: 61%;
+  @include tablet {
+    background-size: 57%;
+    transition: opacity 0.4s;
+  }
+  @include phone {
+    flex: 1;
+    background-size: 100%;
+    background-position: 30px 110%;
+  }
+  @media (max-width: 768px) and (orientation: landscape) {
+    background-size: 42%;
+    flex: 1;
+  }
+}
+.link {
+  color: $color-blue;
+}
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 77px;
+  padding: 0 57px 121px;
+
+  &__title {
+    width: 100%;
+    max-width: 350px;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 1.32;
+    text-align: left;
+    @include phone {
+      max-width: 300px;
+      font-size: 48px;
+      line-height: 1.39;
+    }
+    @media (max-width: 768px) and (orientation: landscape) {
+      font-size: 32px;
+    }
+  }
+  &__text {
+    width: 100%;
+    max-width: 250px;
+    font-size: 23px;
+    text-align: left;
+    @include phone {
+      font-size: 20px;
+      line-height: normal;
+      max-width: 220px;
+    }
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 226px;
+    height: 226px;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(158.5px);
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    background-color: rgb(233, 175, 41);
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    background-color: rgb(19, 71, 241);
+  }
+  @include phone {
+    padding: 39px 0 0;
+    gap: 24px;
+  }
+  @include tablet {
+    text-align: center;
+  }
+  @media (max-width: 768px) and (orientation: landscape) {
+    padding: 0;
+    gap: 10px;
+  }
+}
+
+.form {
+  align-self: flex-start;
+  width: 350px;
+  @include tablet {
+    width: 100%;
+    max-width: 350px;
+    align-self: center;
+    display: none;
+  }
+}

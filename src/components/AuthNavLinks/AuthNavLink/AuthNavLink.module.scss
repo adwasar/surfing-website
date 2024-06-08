@@ -1,0 +1,31 @@
+@import 'src/assets/scss/variables';
+
+.link {
+  display: block;
+  position: relative;
+  padding: 13px 27px;
+  color: $color-blue;
+  border-radius: 21px;
+  background-color: $color-white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 1px;
+    background-color: $color-blue;
+    opacity: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0);
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+}

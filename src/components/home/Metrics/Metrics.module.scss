@@ -1,0 +1,63 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.metrics {
+  margin: 124px auto 0;
+  max-width: 1250px;
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+  @include desktop {
+    flex-direction: column;
+    gap: 40px;
+  }
+  @include tablet {
+    margin-top: 60px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  @include tablet {
+    text-align: center;
+    max-width: 400px;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 798px;
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 258px;
+  height: 128px;
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: 16px;
+  .cardText {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+}
