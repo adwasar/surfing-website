@@ -1,5 +1,7 @@
 # Surfing Website
 
+## Owner Link: [Vero Casa](https://www.linkedin.com/in/dmytro-vytvytskyi-50a141280/?originalSubdomain=ua)
+
 ## Deployment Link: [DEMO](https://surfing-website-xi.vercel.app/)
 
 ## Rules To Code
