@@ -1,6 +1,6 @@
 # Surfing Website
 
-## Deployment Link: [DEMO](https://surfing-website-phi.vercel.app/](https://surfing-website-xi.vercel.app/)
+## Deployment Link: [DEMO](https://surfing-website-xi.vercel.app/)
 
 ## Rules To Code
 
